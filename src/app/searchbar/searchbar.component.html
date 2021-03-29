@@ -1,0 +1,30 @@
+
+<div class="page-header">
+    <div class="page-header-image" style="background-image:url(assets/img/weathery/login.jpg)"></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <form class="form" #searchForm=ngForm (ngSubmit)="rechercheVille(nomVille)">
+                    <div class="header header-primary text-center">
+                        <div class="logo-container">
+                            <img class="imglogo" src="assets/img/weathery/logo.png" alt="" height="100">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="input-group form-group-no-border" >
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">  <i class="now-ui-icons location_world"></i></span>
+                            </div>
+                            <input type="text" class="form-control" name="nomVille" [(ngModel)]=nomVille required placeholder="Saisir la ville..." >
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <button  class="btn btn-round btn-lg [disabled]=!searchForm.valid" >Rechercher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+    </footer>
+</div>
