@@ -4,10 +4,10 @@
     <div class="container">
         <div class="col-md-4 content-center">
             <div class="card card-login card-plain">
-                <form class="form" #searchForm=ngForm (ngSubmit)="rechercheVille(nomVille)">
+                <form autocomplete="off" class="form"  (ngSubmit)="rechercheVille(nomVille)">
                     <div class="header header-primary text-center">
                         <div class="logo-container">
-                            <img class="imglogo" src="assets/img/weathery/logo.png" alt="" height="100">
+                            <img class="imglogo" src="assets/img/weathery/logo.png" alt="" height="400">
                         </div>
                     </div>
                     <div class="content">
@@ -15,7 +15,20 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">  <i class="now-ui-icons location_world"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="nomVille" [(ngModel)]=nomVille required placeholder="Saisir la ville..." >
+                            <label for="input"></label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nomVille"
+                                   [(ngModel)]=nomVille required
+                                   placeholder="Saisir la ville..."
+                                   list="datalist"
+                                   autocomplete="off"
+                                   id="input"
+                                   (input)="requeteVille(nomVille)"
+                            >
+                            <datalist id="datalist">
+                                <option *ngFor="let c of tabVilles" [value]="c">
+                            </datalist>
                         </div>
                     </div>
                     <div class="footer text-center">
