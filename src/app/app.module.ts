@@ -10,12 +10,14 @@ import { ExamplesModule } from './examples/examples.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        SearchbarComponent
+        SearchbarComponent,
+        WeatherComponent
     ],
     imports: [
         BrowserAnimationsModule,

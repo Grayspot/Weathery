@@ -23,7 +23,10 @@ import { ExamplesComponent } from './examples.component';
         })
     ],
     exports: [
-        LoginComponent
+        LoginComponent,
+        LandingComponent,
+        ProfileComponent,
+        ExamplesComponent
     ],
     declarations: [
         LandingComponent,

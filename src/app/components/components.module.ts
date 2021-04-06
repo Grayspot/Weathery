@@ -32,6 +32,6 @@ import { NgbdModalBasic } from './modal/modal.component';
         NotificationComponent,
         NgbdModalBasic
     ],
-    exports:[ ComponentsComponent ]
+    exports: [ComponentsComponent, NgbdModalBasic, BasicelementsComponent, NavigationComponent, NotificationComponent, NucleoiconsComponent, TypographyComponent]
 })
 export class ComponentsModule { }
