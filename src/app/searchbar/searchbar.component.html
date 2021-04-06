@@ -2,40 +2,36 @@
 <div class="page-header">
     <div class="page-header-image" [ngStyle]="{'background-image': 'url(' + setBackgroundImage() + ')'}"></div>
     <div class="container">
-        <div class="col-md-4 content-center">
-            <div class="card card-login card-plain">
-                <form autocomplete="off" class="form"  (ngSubmit)="rechercheVille(nomVille)">
-                    <div class="header header-primary text-center">
-                        <div class="logo-container">
-                            <img class="imglogo" src="assets/img/weathery/logo2.png" alt="" height="400">
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="input-group form-group-no-border" >
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">  <i class="now-ui-icons location_world"></i></span>
-                            </div>
-                            <label for="input"></label>
-                            <input type="text"
-                                   class="form-control"
-                                   name="nomVille"
-                                   [(ngModel)]=nomVille required
-                                   placeholder="Saisir la ville..."
-                                   list="datalist"
-                                   autocomplete="off"
-                                   id="input"
-                                   (input)="requeteVille(nomVille)"
-                            >
-                            <datalist id="datalist">
-                                <option *ngFor="let c of tabVilles" [value]="c">
-                            </datalist>
-                        </div>
-                    </div>
-                    <div class="footer text-center">
-                        <button  class="btn btn-round btn-lg [disabled]=!searchForm.valid" >Rechercher</button>
-                    </div>
-                </form>
-            </div>
+        <div class="logo-container">
+            <img class="imglogo" src="assets/img/weathery/logo2.png" alt="" height="228">
         </div>
+        <form autocomplete="off" class="form"  (ngSubmit)="rechercheVille(nomVille)">
+            <div class="content">
+                <div class="input-group form-group-no-border" >
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">  <i class="now-ui-icons location_world"></i></span>
+                    </div>
+                    <label for="input"></label>
+                    <input type="text"
+                           class="form-control"
+                           name="nomVille"
+                           [(ngModel)]=nomVille required
+                           placeholder="Saisir la ville..."
+                           list="datalist"
+                           autocomplete="off"
+                           id="input"
+                           (input)="requeteVille(nomVille)"
+                    >
+                    <datalist id="datalist">
+                        <option *ngFor="let c of tabVilles" [value]="c">
+                    </datalist>
+                </div>
+            </div>
+            <div class="footer text-center">
+                <button  class="btn btn-round btn-lg [disabled]=!searchForm.valid" >Rechercher</button>
+            </div>
+        </form>
     </div>
 </div>
+<app-weather></app-weather>
+
