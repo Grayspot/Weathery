@@ -15,7 +15,7 @@ export class WeatherComponent implements OnInit {
       main : {},
       isDay: true
     };
-    this.getWeatherData('Paris');
+    //this.getWeatherData('Paris');
     console.log(this.WeatherData);
   }
 

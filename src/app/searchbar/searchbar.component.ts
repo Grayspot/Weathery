@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {WeatherComponent} from '../weather/weather.component';
 
 let tabVille = [];
 let tabPhoto = [];
@@ -12,6 +13,7 @@ let index = 0;
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit {
+  @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
   nomVille = '';
   tabVilles = [];
   tabPhotos = [];
@@ -32,6 +34,7 @@ export class SearchbarComponent implements OnInit {
       tabURLPhoto = [];
       index = 0;
       this.nomVille = nom;
+      this.child.getWeatherData(nom);
       // console.log('Le nom de la ville recherchée : ', this.nomVille);
       this.requeteChoixVille(nom);
       this.requetePhoto();
