@@ -27,7 +27,9 @@
               "src/assets/css/demo.css"
             ],
             "scripts": [
-              "node_modules/rellax/rellax.min.js"
+              "node_modules/rellax/rellax.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/app/music-player/script.js"
             ]
           },
           "configurations": {
