@@ -9,6 +9,7 @@ export class WeatherComponent implements OnInit {
 
   WeatherData: any;
   Visibility: string;
+  WeatherTypeM: string;
   constructor() { }
 
   ngOnInit() {
@@ -45,26 +46,35 @@ export class WeatherComponent implements OnInit {
     this.WeatherData.weatherID = (this.WeatherData.weather[0].id);
     this.WeatherData.weatherDescription = (this.WeatherData.weather[0].description);
     this.Visibility = "visible";
+    this.getWeatherType();
   }
 
   getWeatherType(){
     let id;
     id=parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));
     if(id>199 && id<233){
+      this.WeatherTypeM="Thunder";
       return "Thunder";
     }else if(id>299 && id<322){
+      this.WeatherTypeM="Drizzle";
       return "Drizzle";
     }else if(id>499 && id<532){
+      this.WeatherTypeM="Rain";
       return "Rain";
     }else if(id>599 && id<623){
+      this.WeatherTypeM="Snow";
       return "Snow";
     }else if(id>699 && id<782){
+      this.WeatherTypeM="Atmosphere";
       return "Atmosphere";
     }else if(id==800){
+      this.WeatherTypeM="Clouds Clear Ambience";
       return "Clear";
     }else if(id>799 && id<805){
+      this.WeatherTypeM="Clouds Clear Ambience";
       return "Clouds";
     }else{
+      this.WeatherTypeM="Clouds Clear Ambience";
       return "error";
       // console.log("GetWeatherType Failed.");
     }
