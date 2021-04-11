@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c9dabd4-b063-444d-ba88-e6035d013d48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/AtmosphereNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/ClearNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/CloudsNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/DrizzleNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/RainNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/SnowNight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/sound/Weathery.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="1c9dabd4-b063-444d-ba88-e6035d013d48" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
