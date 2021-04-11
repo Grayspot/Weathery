@@ -11,15 +11,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { WeatherComponent } from './weather/weather.component';
-import { MusicPlayerComponent } from './music-player/music-player.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
         SearchbarComponent,
-        WeatherComponent,
-        MusicPlayerComponent
+        WeatherComponent
     ],
     imports: [
         BrowserAnimationsModule,

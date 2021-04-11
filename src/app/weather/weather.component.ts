@@ -8,15 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class WeatherComponent implements OnInit {
 
   WeatherData: any;
+  Visibility: string;
   constructor() { }
 
   ngOnInit() {
+    this.Visibility = "hidden";
     this.WeatherData = {
+      weather : [{}],
       main : {},
       isDay: true
     };
     //this.getWeatherData('Paris');
     console.log(this.WeatherData);
+    this.getWeatherType();
   }
 
   getWeatherData(city: string) {
@@ -39,6 +43,31 @@ export class WeatherComponent implements OnInit {
     this.WeatherData.temp_min = (this.WeatherData.main.temp_min - 273.15).toFixed(0);
     this.WeatherData.temp_max = (this.WeatherData.main.temp_max - 273.15).toFixed(0);
     this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like - 273.15).toFixed(0);
+    this.WeatherData.weatherID = (this.WeatherData.weather[0].id);
+    this.WeatherData.weatherDescription = (this.WeatherData.weather[0].description);
+    this.Visibility = "visible";
   }
 
+  getWeatherType(){
+    var id;
+    id=parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));
+    if(id>199 && id<233){
+      return "Thunder";
+    }else if(id>299 && id<322){
+      return "Drizzle";
+    }else if(id>499 && id<532){
+      return "Rain";
+    }else if(id>599 && id<623){
+      return "Snow";
+    }else if(id>699 && id<782){
+      return "Atmosphere";
+    }else if(id==800){
+      return "Clear";
+    }else if(id>799 && id<805){
+      return "Clouds";
+    }else{
+      return "error";
+      console.log("GetWeatherType Failed.");
+    }
+  }
 }

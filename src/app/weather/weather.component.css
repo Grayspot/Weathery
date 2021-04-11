@@ -1,18 +1,14 @@
 #divWeatherMain{
     display: block;
-    width: inherit;
-    height: inherit;
+    border-radius: 10px;
+    position: inherit;
+    width: 200px;
+    height: 260px;
+
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.widgetBackground{
-    width: 200px;
-    height: 220px;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1) 75%, rgb(8, 10, 63) 100%);
-    opacity:0.6;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
 }
 
 .weatherWidgetRow{
@@ -50,4 +46,29 @@
 @keyframes cloudMovement{
     from{margin-left: -55px;}
     to{margin-left: 65px;}
+}
+
+.glass{
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(3px);
+}
+
+.preview{
+    content: " ";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    min-width: 50px;
+    min-height: 50px;
+    animation-name: custom_anim;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+}
+
+@keyframes custom_anim{
+    from{margin-left: -30px;}
+    to{margin-left: 30px;}
 }
