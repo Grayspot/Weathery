@@ -11,12 +11,7 @@
       <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/SnowNight.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/assets/sound/Weathery.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Drizzle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Drizzle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Rain.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Rain.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Snow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Snow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,17 +55,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (now-ui-kit-angular-e2e)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -108,6 +92,7 @@
       <workItem from="1618086714742" duration="13281000" />
       <workItem from="1618138793579" duration="6416000" />
       <workItem from="1618153627688" duration="14547000" />
+      <workItem from="1618173461932" duration="336000" />
     </task>
     <servers />
   </component>
