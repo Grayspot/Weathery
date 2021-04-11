@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-weather',
@@ -18,8 +18,7 @@ export class WeatherComponent implements OnInit {
       main : {},
       isDay: true
     };
-    //this.getWeatherData('Paris');
-    console.log(this.WeatherData);
+    // console.log(this.WeatherData);
     this.getWeatherType();
   }
 
@@ -49,7 +48,7 @@ export class WeatherComponent implements OnInit {
   }
 
   getWeatherType(){
-    var id;
+    let id;
     id=parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));
     if(id>199 && id<233){
       return "Thunder";
@@ -67,7 +66,7 @@ export class WeatherComponent implements OnInit {
       return "Clouds";
     }else{
       return "error";
-      console.log("GetWeatherType Failed.");
+      // console.log("GetWeatherType Failed.");
     }
   }
 }
