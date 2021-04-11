@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c9dabd4-b063-444d-ba88-e6035d013d48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/AtmosphereNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/ClearNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/CloudsNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/DrizzleNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/RainNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/SnowNight.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sound/Weathery.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/music/music.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/music/music.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Drizzle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Drizzle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Rain.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Rain.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Snow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated/Snow.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +27,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qshLaLQNF1Dvxmv0bePSc5jaDf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/img/weathery/weather-api/animated" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,6 +52,9 @@
     <property name="ts.external.directory.path" value="C:\Users\musta\Desktop\Projet Weathery\Weathery\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\GIT REPOS\Weathery\src\assets\img\weathery\weather-api\animated" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\GIT REPOS\Weathery\src\assets\img" />
     </key>
@@ -110,5 +125,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -13,6 +13,8 @@ export class WeatherComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const music=<HTMLInputElement>document.getElementById("whynot");
+    this.WeatherTypeM="Weathery";
     this.Visibility = "hidden";
     this.WeatherData = {
       weather : [{}],
@@ -57,26 +59,49 @@ export class WeatherComponent implements OnInit {
       return "Thunder";
     }else if(id>299 && id<322){
       this.WeatherTypeM="Drizzle";
-      return "Drizzle";
+      if(this.WeatherData.isDay){
+        return "Drizzle";
+      }else{
+        return "DrizzleNight";
+      }
     }else if(id>499 && id<532){
       this.WeatherTypeM="Rain";
-      return "Rain";
+      if(this.WeatherData.isDay){
+        return "Rain";
+      }else{
+        return "RainNight";
+      }
     }else if(id>599 && id<623){
       this.WeatherTypeM="Snow";
-      return "Snow";
+      if(this.WeatherData.isDay){
+        return "Snow";
+      }else{
+        return "SnowNight";
+      }
     }else if(id>699 && id<782){
       this.WeatherTypeM="Atmosphere";
-      return "Atmosphere";
+      if(this.WeatherData.isDay){
+        return "Atmosphere";
+      }else{
+        return "AtmosphereNight";
+      }
     }else if(id==800){
       this.WeatherTypeM="Clouds Clear Ambience";
-      return "Clear";
+      if(this.WeatherData.isDay){
+        return "Clouds";
+      }else{
+        return "CloudsNight";
+      }
     }else if(id>799 && id<805){
       this.WeatherTypeM="Clouds Clear Ambience";
-      return "Clouds";
+      if(this.WeatherData.isDay){
+        return "Clouds";
+      }else{
+        return "CloudsNight";
+      }
     }else{
-      this.WeatherTypeM="Clouds Clear Ambience";
-      return "error";
-      // console.log("GetWeatherType Failed.");
+      this.WeatherTypeM="Weathery";
+      return "Clear";
     }
   }
 }
