@@ -7,6 +7,10 @@ let tabURLPhoto = [];
 let placeId = '';
 let index = 0;
 
+function randomInteger(max) {
+  return Math.floor(Math.random() * max);
+}
+
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
@@ -124,15 +128,9 @@ export class SearchbarComponent implements OnInit {
     let indice = 1;
     if (this.tabURLPhotos.length === 0) {
       return 'assets/img/weathery/login.jpg';
-    } else {
-        while (this.tabURLPhotos[indice] === null) {
-          indice++;
-          if ( indice === this.tabURLPhotos.length) {
-            indice = 0;
-          }
+    }  else {
+          indice = randomInteger(this.tabURLPhotos.length);
         }
-      // tslint:disable-next-line:max-line-length
-        return this.tabURLPhotos[indice]; // Il prend la deuxième photo, il faut ajouter un bouton pour que l'utilisateur change l'image du site
+    return this.tabURLPhotos[indice];
     }
   }
-}
