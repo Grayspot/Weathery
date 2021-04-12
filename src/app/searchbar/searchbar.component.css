@@ -9,6 +9,10 @@
     filter:alpha(opacity=50);
 }
 
+.test-inp{
+    background: red;
+}
+
 .logo-text{
     display:block;
     margin-left: auto;

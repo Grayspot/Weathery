@@ -8,14 +8,14 @@ import { SearchbarComponent } from 'app/searchbar/searchbar.component';
 })
 export class WeatherComponent implements OnInit {
 
-  @ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
+  //@ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
   WeatherData: any;
   Visibility: string;
-  WeatherTypeM: string;
+  WeatherTypeM="Weathery";
+
   constructor() { }
 
   ngOnInit() {
-    this.WeatherTypeM="Weathery";
     this.Visibility = "hidden";
     this.WeatherData = {
       weather : [{}],

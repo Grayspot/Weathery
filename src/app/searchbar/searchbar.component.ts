@@ -79,7 +79,7 @@ export class SearchbarComponent implements OnInit {
           }
         }
       };
-      this.requestVille.open( 'GET', 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + nom + '&types=geocode&language=fr&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
+      this.requestVille.open( 'GET', 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + nom + '&types=geocode&language=en&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
       this.requestVille.send();
       this.tabVilles = tabVille;
     }
@@ -141,7 +141,7 @@ export class SearchbarComponent implements OnInit {
     if (this.tabURLPhotos.length === 0) {
       return 'assets/img/weathery/login.jpg';
     }  else {
-          indice = randomInteger(this.tabURLPhotos.length);
+          indice = randomInteger(2);
         }
     return this.tabURLPhotos[indice];
     }

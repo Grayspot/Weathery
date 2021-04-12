@@ -14,12 +14,13 @@
                            class="form-control"
                            name="nomVille"
                            [(ngModel)]=nomVille required
-                           placeholder="Saisir la ville..."
+                           placeholder="Search..."
                            list="datalist"
                            autocomplete="off"
                            id="input"
                            (input)="requeteVille(nomVille)"
                     >
+                    <input class="btn btn-round btn-lg [disabled]=!searchForm.valid" type="reset" value="X">
                     <datalist id="datalist">
                         <option *ngFor="let c of tabVilles" [value]="c">
                     </datalist>
