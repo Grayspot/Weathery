@@ -24,6 +24,7 @@ function randomInteger(max) {
 export class SearchbarComponent implements OnInit {
   // Récupère les variables et méthodes de WeatherComponent
   @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
+  loading = false;
 
   // Variables utilisées notamment pour la communication entre le typescript et l'HTML de ce composant
   longitude = '';

@@ -30,8 +30,6 @@ export class WeatherComponent implements OnInit {
   }
 
   getWeatherDataByCoords(latt: string, long: string) {
-    console.log(latt);
-    console.log(long);
     if (long !== 'error' && latt !== 'error') {
       fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + latt + '&lon=' + long + '&appid=ff1bc4683fc7325e9c57e586c20cc03e')
           .then(response => response.json())
