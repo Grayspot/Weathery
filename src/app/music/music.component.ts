@@ -1,9 +1,13 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {WeatherComponent} from '../weather/weather.component';
 
+// Note : Le serveur qui donne le lien URL des sons est instable, on a décidé donc de prendre les sons depuis le dossier assets/sound
+
+// Variables globaux qui servent d'intermédiaires pour stocker les données json des requêtes XMLHTTP
 const tabSound = [];
 let URLmusic = '';
 
+// Contient le code HTML du composant
 @Component({
   selector: 'app-music',
   template: `<div>
@@ -15,16 +19,21 @@ let URLmusic = '';
 })
 export class MusicComponent implements OnInit {
 
+  // Récupère les variables et méthodes de WeatherComponent
   @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
+
+  // Requêtes XMLHTTP
   requestPlayList = new XMLHttpRequest();
   requestMusic = new XMLHttpRequest();
 
   constructor() { }
 
+  // Démarre le chargement de la playlist
   ngOnInit(): void {
     this.requetePlaylist();
   }
 
+  // Méthode qui permet de récupérer les id des sons de la playlist
   public requetePlaylist() {
     this.requestPlayList.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
@@ -42,18 +51,21 @@ export class MusicComponent implements OnInit {
     this.requestPlayList.send();
   }
 
+  // Méthode qui permet de récupérer le lien URL du son
   public requeteMusic(id: string) {
     this.requestMusic.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         const response = JSON.stringify(this.response);
-        URLmusic = response.substring(1244, 1380);
+        URLmusic = response.substring(1244, 1380);          // Prend le son en 320kbs
       }
     };
     this.requestMusic.open('GET', 'https://www.yt-download.org/api/button/mp3/' + id, false);
     this.requestMusic.send();
+    // console.log(URLmusic)
     return URLmusic;
   }
 
+  // Méthode qui lance la musique en fonction de la météo (v1)
   public startMusic(weather: string) {
 
     if (weather === 'Thunder') {
@@ -71,7 +83,7 @@ export class MusicComponent implements OnInit {
     } else if (weather === 'Clouds') {
       return this.requeteMusic(tabSound[3]);
     } else {
-      return '../../assets/sound/Rain.mp3';
+      return '../../assets/sound/Weathery.mp3';
     }
   }
 }
