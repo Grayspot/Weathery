@@ -6,6 +6,8 @@ let tabPhoto = [];
 let tabURLPhoto = [];
 let placeId = '';
 let index = 0;
+let Latitude = 0;
+let Longitude = 0;
 
 function randomInteger(max) {
   return Math.floor(Math.random() * max);
@@ -18,6 +20,8 @@ function randomInteger(max) {
 })
 export class SearchbarComponent implements OnInit {
   @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
+  longitude = 0;
+  latitude = 0;
   nomVille = '';
   tabVilles = [];
   tabPhotos = [];
@@ -37,6 +41,8 @@ export class SearchbarComponent implements OnInit {
       tabPhoto = [];
       tabURLPhoto = [];
       index = 0;
+      this.latitude=0;
+      this.longitude=0;
       this.nomVille = nom;
       this.child.getWeatherData(nom);
       // console.log('Le nom de la ville recherchée : ', this.nomVille);
@@ -79,25 +85,31 @@ export class SearchbarComponent implements OnInit {
     }
   }
   public requetePhoto() {
-      this.requestPhoto.onreadystatechange = function () {
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          const response = JSON.parse(this.responseText);
-          const taille = response.result.photos.length;
-          // console.log(response);
-          for (let i = 0; i < taille; i++) {
-            // tslint:disable-next-line:max-line-length
-            if (response.result.photos[i].height > 720 && response.result.photos[i].width > 1280) { // Photo en HD Ready
-              // console.log(response.result.photos[i].photo_reference);
-              tabPhoto[i] = response.result.photos[i].photo_reference;
-            }
-           }
+    this.requestPhoto.onreadystatechange = function () {
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        const taille = response.result.photos.length;
+        // console.log(response);
+        Latitude = response.result.geometry.location.lat;
+        Longitude = response.result.geometry.location.lng;
+        for (let i = 0; i < taille; i++) {
+          // tslint:disable-next-line:max-line-length
+          if (response.result.photos[i].height > 720 && response.result.photos[i].width > 1280) { // Photo en HD Ready
+            // console.log(response.result.photos[i].photo_reference);
+            tabPhoto[i] = response.result.photos[i].photo_reference;
+          }
         }
-      };
-      this.requestPhoto.open('GET', 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeId + '&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
-      this.requestPhoto.send();
-      this.tabPhotos = tabPhoto.filter(function(err) {
-        return err != null;
-      });
+      }
+    };
+    this.requestPhoto.open('GET', 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeId + '&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
+    this.requestPhoto.send();
+    this.tabPhotos = tabPhoto.filter(function(err) {
+      return err != null;
+    });
+    this.latitude = Latitude;
+    this.longitude = Longitude;
+    // console.log(this.latitude);
+    // console.log(this.longitude);
   }
 
   public requeteChoixVille(nom: string) {

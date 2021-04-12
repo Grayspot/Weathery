@@ -8,16 +8,16 @@ It also has several minor functionalities, such as:
 - A music player launches a track with ambient sounds corresponding to the current weather.
 
 ### Different API's we use in this app:
-- Google Places (autocompletion and fetching photos of different places).
+- Google Places (autocomplete, details, photos).
 - OpenWeather (current weather information).
 - Youtube API (fetching ambient sounds for current weather).
 
 
 ## App architecture (subject to change):
-![alt text](https://i.ibb.co/FDkM4nn/prototype.png)
+![Architecture Image](https://i.ibb.co/6gRDdx8/prototype.png)
 
 ### Other info and documentation:
-All the other documents (such as story-board, personas, graphics chart etc) are placed in /docs/livrables/.
+All the other documents (such as story-board, personas, graphics chart etc) are located in /docs/livrables/.
 
 ### Useful Links
 - [Projects Trello](https://trello.com/b/hT9aDvtk/projet-archi-groupe-3)

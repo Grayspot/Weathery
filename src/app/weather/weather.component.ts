@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import { SearchbarComponent } from 'app/searchbar/searchbar.component';
 
 @Component({
   selector: 'app-weather',
@@ -7,13 +8,13 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
+  @ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
   WeatherData: any;
   Visibility: string;
   WeatherTypeM: string;
   constructor() { }
 
   ngOnInit() {
-    const music=<HTMLInputElement>document.getElementById("whynot");
     this.WeatherTypeM="Weathery";
     this.Visibility = "hidden";
     this.WeatherData = {
@@ -21,7 +22,6 @@ export class WeatherComponent implements OnInit {
       main : {},
       isDay: true
     };
-    // console.log(this.WeatherData);
     this.getWeatherType();
   }
 
