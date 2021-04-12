@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import { SearchbarComponent } from 'app/searchbar/searchbar.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-weather',
@@ -8,7 +7,6 @@ import { SearchbarComponent } from 'app/searchbar/searchbar.component';
 })
 export class WeatherComponent implements OnInit {
 
-  //@ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
   WeatherData: any;
   Visibility: string;
   WeatherTypeM = 'Weathery';
@@ -29,18 +27,17 @@ export class WeatherComponent implements OnInit {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=ff1bc4683fc7325e9c57e586c20cc03e')
         .then(response => response.json())
         .then(data => {this.setWeatherData(data); })
-
   }
 
   getWeatherDataByCoords(latt: string, long: string) {
     console.log(latt);
     console.log(long);
-    if(long !== "error" && latt !== "error"){
-      fetch('https://api.openweathermap.org/data/2.5/weather?lat='+latt+'&lon='+long+'&appid=ff1bc4683fc7325e9c57e586c20cc03e')
+    if (long !== 'error' && latt !== 'error') {
+      fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + latt + '&lon=' + long + '&appid=ff1bc4683fc7325e9c57e586c20cc03e')
           .then(response => response.json())
           .then(data => {this.setWeatherData(data); })
-    }else{
-      console.log("ERROR GET WEATHER DATA BY COORDS");
+    } else {
+      console.log('ERROR GET WEATHER DATA BY COORDS');
     }
   }
 
@@ -60,11 +57,12 @@ export class WeatherComponent implements OnInit {
     this.getWeatherType();
   }
 
-  //A function that returns current weather type depending on the ID of the weather and time of the day in the place fetched from Weather API.
-  //Used 2 times:
-  //To display weather type on weather-widget.
-  //To set path to the svg icon that wiil be displayed by weather-widget.
-  getWeatherType(){
+  // tslint:disable-next-line:max-line-length
+  // A function that returns current weather type depending on the ID of the weather and time of the day in the place fetched from Weather API.
+  // Used 2 times:
+  // To display weather type on weather-widget.
+  // To set path to the svg icon that wiil be displayed by weather-widget.
+  getWeatherType() {
     let id;
     // tslint:disable-next-line:radix
     id = parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));

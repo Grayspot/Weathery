@@ -6,8 +6,8 @@ let tabPhoto = [];
 let tabURLPhoto = [];
 let placeId = '';
 let index = 0;
-let Latitude = 0;
-let Longitude = 0;
+let Latitude = '';
+let Longitude = '';
 
 function randomInteger(max) {
   return Math.floor(Math.random() * max);
@@ -20,8 +20,8 @@ function randomInteger(max) {
 })
 export class SearchbarComponent implements OnInit {
   @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
-  longitude = 0;
-  latitude = 0;
+  longitude = '';
+  latitude = '';
   nomVille = '';
   tabVilles = [];
   tabPhotos = [];
@@ -41,14 +41,14 @@ export class SearchbarComponent implements OnInit {
       tabPhoto = [];
       tabURLPhoto = [];
       index = 0;
-      this.latitude = "error";
-      this.longitude = "error";
+      this.latitude = 'error';
+      this.longitude = 'error';
       this.nomVille = nom;
       // console.log('Le nom de la ville recherchée : ', this.nomVille);
       this.requeteChoixVille(nom);
       this.requetePhoto();
       this.child.getWeatherDataByCoords(this.latitude, this.longitude);
-      
+
       const temp = this.tabPhotos.length;
       if (temp < this.nbPhotomax) {
         this.nbPhotomax = temp;
