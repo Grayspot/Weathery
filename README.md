@@ -23,6 +23,7 @@ All the other documents (such as story-board, personas, graphics chart etc) are 
 - [Projects Trello](https://trello.com/b/hT9aDvtk/projet-archi-groupe-3)
 - [Cahier de Charges](https://www.overleaf.com/read/xwyjjhxxpsvy)
 - [Questionnaire d'analyse](https://docs.google.com/forms/d/e/1FAIpQLSeqdiXNbK-jC192XmftETDEXSXMsVxMFxbHD6CYXvRmq1b5jQ/viewform)
+- [Charte Graphique](https://drive.google.com/file/d/1YQ8G5o1XhU4rs7V40fe8iADXk-CNGGUJ/view?usp=sharing)
 
 [CHANGELOG]: ./CHANGELOG.md
 [version-badge]: https://img.shields.io/badge/version-0.8.5-blue.svg
