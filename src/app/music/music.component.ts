@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {WeatherComponent} from "../weather/weather.component";
+import {WeatherComponent} from '../weather/weather.component';
 
-let tabSound = [];
+const tabSound = [];
 let URLmusic = '';
 
 @Component({
@@ -46,46 +46,32 @@ export class MusicComponent implements OnInit {
     this.requestMusic.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         const response = JSON.stringify(this.response);
-        URLmusic = response.substring(1244,1380);
+        URLmusic = response.substring(1244, 1380);
       }
     };
-    this.requestMusic.open('GET', 'https://www.yt-download.org/api/button/mp3/'+ id, false);
+    this.requestMusic.open('GET', 'https://www.yt-download.org/api/button/mp3/' + id, false);
     this.requestMusic.send();
     return URLmusic;
   }
 
-  public startMusic(weather: string){
+  public startMusic(weather: string) {
 
-    if (weather === "Thunder"){
+    if (weather === 'Thunder') {
       return this.requeteMusic(tabSound[1]);
-    }
-    else if (weather === "Drizzle"){
+    } else if (weather === 'Drizzle') {
       return this.requeteMusic(tabSound[5]);
-    }
-    else if (weather === "Rain"){
+    } else if (weather === 'Rain') {
       return this.requeteMusic(tabSound[0]);
-    }
-    else if (weather === "Snow"){
+    } else if (weather === 'Snow') {
       return this.requeteMusic(tabSound[2]);
-    }
-    else if (weather === "Atmosphere"){
+    } else if (weather === 'Atmosphere') {
       return this.requeteMusic(tabSound[4]);
-    }
-    else if (weather === "Clear"){
+    } else if (weather === 'Clear') {
       return this.requeteMusic(tabSound[3]);
-    }
-    else if (weather === "Clouds"){
+    } else if (weather === 'Clouds') {
       return this.requeteMusic(tabSound[3]);
+    } else {
+      return '../../assets/sound/Rain.mp3';
     }
-    else{
-      return "../../assets/sound/Rain.mp3";
-    }
-  }
-
-  public launchMusic(){
-    let audio = new Audio();
-    audio.src = this.startMusic(this.child.getWeatherType());
-    audio.load();
-    audio.play();
   }
 }

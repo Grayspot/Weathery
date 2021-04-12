@@ -8,15 +8,15 @@ import { SearchbarComponent } from 'app/searchbar/searchbar.component';
 })
 export class WeatherComponent implements OnInit {
 
-  //@ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
+  // @ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
   WeatherData: any;
   Visibility: string;
-  WeatherTypeM="Weathery";
+  WeatherTypeM = 'Weathery';
 
   constructor() { }
 
   ngOnInit() {
-    this.Visibility = "hidden";
+    this.Visibility = 'hidden';
     this.WeatherData = {
       weather : [{}],
       main : {},
@@ -47,61 +47,62 @@ export class WeatherComponent implements OnInit {
     this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like - 273.15).toFixed(0);
     this.WeatherData.weatherID = (this.WeatherData.weather[0].id);
     this.WeatherData.weatherDescription = (this.WeatherData.weather[0].description);
-    this.Visibility = "visible";
+    this.Visibility = 'visible';
     this.getWeatherType();
   }
 
-  getWeatherType(){
+  getWeatherType() {
     let id;
-    id=parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));
-    if(id>199 && id<233){
-      this.WeatherTypeM="Thunder";
-      return "Thunder";
-    }else if(id>299 && id<322){
-      this.WeatherTypeM="Drizzle";
-      if(this.WeatherData.isDay){
-        return "Drizzle";
-      }else{
-        return "DrizzleNight";
+    // tslint:disable-next-line:radix
+    id = parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));
+    if (id > 199 && id < 233) {
+      this.WeatherTypeM = 'Thunder';
+      return 'Thunder';
+    } else if (id > 299 && id < 322) {
+      this.WeatherTypeM = 'Drizzle';
+      if (this.WeatherData.isDay) {
+        return 'Drizzle';
+      } else {
+        return 'DrizzleNight';
       }
-    }else if(id>499 && id<532){
-      this.WeatherTypeM="Rain";
-      if(this.WeatherData.isDay){
-        return "Rain";
-      }else{
-        return "RainNight";
+    } else if (id > 499 && id < 532) {
+      this.WeatherTypeM = 'Rain';
+      if (this.WeatherData.isDay) {
+        return 'Rain';
+      } else {
+        return 'RainNight';
       }
-    }else if(id>599 && id<623){
-      this.WeatherTypeM="Snow";
-      if(this.WeatherData.isDay){
-        return "Snow";
-      }else{
-        return "SnowNight";
+    } else if (id > 599 && id < 623) {
+      this.WeatherTypeM = 'Snow';
+      if (this.WeatherData.isDay) {
+        return 'Snow';
+      } else {
+        return 'SnowNight';
       }
-    }else if(id>699 && id<782){
-      this.WeatherTypeM="Atmosphere";
-      if(this.WeatherData.isDay){
-        return "Atmosphere";
-      }else{
-        return "AtmosphereNight";
+    } else if (id > 699 && id < 782) {
+      this.WeatherTypeM = 'Atmosphere';
+      if (this.WeatherData.isDay) {
+        return 'Atmosphere';
+      } else {
+        return 'AtmosphereNight';
       }
-    }else if(id==800){
-      this.WeatherTypeM="Clouds Clear Ambience";
-      if(this.WeatherData.isDay){
-        return "Clouds";
-      }else{
-        return "CloudsNight";
+    } else if (id === 800) {
+      this.WeatherTypeM = 'Clouds Clear Ambience';
+      if (this.WeatherData.isDay) {
+        return 'Clouds';
+      } else {
+        return 'CloudsNight';
       }
-    }else if(id>799 && id<805){
-      this.WeatherTypeM="Clouds Clear Ambience";
-      if(this.WeatherData.isDay){
-        return "Clouds";
-      }else{
-        return "CloudsNight";
+    } else if (id > 799 && id < 805) {
+      this.WeatherTypeM = 'Clouds Clear Ambience';
+      if (this.WeatherData.isDay) {
+        return 'Clouds';
+      } else {
+        return 'CloudsNight';
       }
-    }else{
-      this.WeatherTypeM="Weathery";
-      return "Clear";
+    } else {
+      this.WeatherTypeM = 'Weathery';
+      return 'Clear';
     }
   }
 }

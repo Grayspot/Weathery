@@ -41,8 +41,8 @@ export class SearchbarComponent implements OnInit {
       tabPhoto = [];
       tabURLPhoto = [];
       index = 0;
-      this.latitude=0;
-      this.longitude=0;
+      this.latitude = 0;
+      this.longitude = 0;
       this.nomVille = nom;
       this.child.getWeatherData(nom);
       // console.log('Le nom de la ville recherchée : ', this.nomVille);
@@ -61,9 +61,6 @@ export class SearchbarComponent implements OnInit {
       this.tabURLPhotos = tabURLPhoto.filter(function(err) {
         return err != null;
       });
-      for (let j = 0; j < this.tabPhotos.length; j++) {
-        console.log(this.tabURLPhotos[j]);
-       }
     }
   }
   public requeteVille(nom: string) {
@@ -120,7 +117,7 @@ export class SearchbarComponent implements OnInit {
           // console.log(response);
           placeId = response.predictions[0].place_id;
         }});
-      this.requestChoixVille.open( 'GET', 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + nom + '&types=geocode&language=fr&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
+      this.requestChoixVille.open( 'GET', 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' + nom + '&types=geocode&language=en&key=AIzaSyD9K_P6cREPoxh9HHfMw7yR5gbE-vJTsnA', false);
       this.requestChoixVille.send();
     }
   }
