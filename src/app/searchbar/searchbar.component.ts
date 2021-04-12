@@ -24,9 +24,9 @@ function randomInteger(max) {
 export class SearchbarComponent implements OnInit {
   // Récupère les variables et méthodes de WeatherComponent
   @ViewChild(WeatherComponent, {static: false}) child: WeatherComponent;
-  loading = false;
 
   // Variables utilisées notamment pour la communication entre le typescript et l'HTML de ce composant
+  loading = false;
   longitude = '';
   latitude = '';
   nomVille = '';
@@ -46,6 +46,7 @@ export class SearchbarComponent implements OnInit {
 
   // Méthode principal qui est lancée après le clique sur le bouton "Go"
   public rechercheVille(nom: string) {
+    this.loading = true;
     if (nom !== '') {
       // Initialisation des variables après chaque recherche
       tabVille = []
