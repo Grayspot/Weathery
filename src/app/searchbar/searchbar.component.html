@@ -20,14 +20,14 @@
                            id="input"
                            (input)="requeteVille(nomVille)"
                     >
-                    <input class="btn-simple btn-round" type="reset" value="X">
+                    <input class="reset-button" type="reset" value="↺">
                     <datalist id="datalist">
                         <option *ngFor="let c of tabVilles" [value]="c">
                     </datalist>
                 </div>
             </div>
             <div class="footer text-center">
-                <button  class="btn btn-round btn-lg [disabled]=!searchForm.valid" >Go</button>
+                <button  class="glass-button" >Go</button>
             </div>
         </form>
         <app-weather></app-weather>

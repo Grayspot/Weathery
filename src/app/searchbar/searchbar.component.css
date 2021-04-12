@@ -10,9 +10,40 @@
 }
 
 .glass-button {
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, .15);
+    font-family: Comfortaa, sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    border-color: #b1b1b1;
+    min-height: 50px;
+    min-width: 100px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
+    outline: none;
+    z-index: 100;
+}
+
+.reset-button:hover{
+    border-color: #b1b1b1;
+    box-shadow: 0 0 5px #b1b1b1;
+}
+
+.reset-button {
+    font-family: Comfortaa, sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: -100px;
+    border-color: #b1b1b1;
+    min-height: 50px;
+    min-width: 100px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    outline: none;
+    z-index: 100;
+}
+
+.glass-button:hover{
+    border-color: #b1b1b1;
+    box-shadow: 0 0 5px #b1b1b1;
 }
 
 .logo-text{
