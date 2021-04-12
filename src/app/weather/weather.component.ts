@@ -8,7 +8,7 @@ import { SearchbarComponent } from 'app/searchbar/searchbar.component';
 })
 export class WeatherComponent implements OnInit {
 
-  // @ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
+  //@ViewChild(SearchbarComponent, {static: false}) child: SearchbarComponent;
   WeatherData: any;
   Visibility: string;
   WeatherTypeM = 'Weathery';
@@ -25,14 +25,23 @@ export class WeatherComponent implements OnInit {
     this.getWeatherType();
   }
 
-  getWeatherData(city: string) {
+  getWeatherDataByCity(city: string) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=ff1bc4683fc7325e9c57e586c20cc03e')
         .then(response => response.json())
         .then(data => {this.setWeatherData(data); })
 
-    // tslint:disable-next-line:max-line-length
-    // let data = JSON.parse('{"coord":{"lon":72.85,"lat":19.01},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":297.15,"feels_like":297.4,"temp_min":297.15,"temp_max":297.15,"pressure":1013,"humidity":69},"visibility":3500,"wind":{"speed":3.6,"deg":300},"clouds":{"all":20},"dt":1580141589,"sys":{"type":1,"id":9052,"country":"IN","sunrise":1580089441,"sunset":1580129884},"timezone":19800,"id":1275339,"name":"Mumbai","cod":200}');
-    // this.setWeatherData(data);
+  }
+
+  getWeatherDataByCoords(latt: string, long: string) {
+    console.log(latt);
+    console.log(long);
+    if(long !== "error" && latt !== "error"){
+      fetch('https://api.openweathermap.org/data/2.5/weather?lat='+latt+'&lon='+long+'&appid=ff1bc4683fc7325e9c57e586c20cc03e')
+          .then(response => response.json())
+          .then(data => {this.setWeatherData(data); })
+    }else{
+      console.log("ERROR GET WEATHER DATA BY COORDS");
+    }
   }
 
   setWeatherData(data) {
@@ -51,7 +60,11 @@ export class WeatherComponent implements OnInit {
     this.getWeatherType();
   }
 
-  getWeatherType() {
+  //A function that returns current weather type depending on the ID of the weather and time of the day in the place fetched from Weather API.
+  //Used 2 times:
+  //To display weather type on weather-widget.
+  //To set path to the svg icon that wiil be displayed by weather-widget.
+  getWeatherType(){
     let id;
     // tslint:disable-next-line:radix
     id = parseInt(this.WeatherData.weatherID = (this.WeatherData.weather[0].id));

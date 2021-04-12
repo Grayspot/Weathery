@@ -41,16 +41,14 @@ export class SearchbarComponent implements OnInit {
       tabPhoto = [];
       tabURLPhoto = [];
       index = 0;
-      this.latitude = 0;
-      this.longitude = 0;
+      this.latitude = "error";
+      this.longitude = "error";
       this.nomVille = nom;
-      this.child.getWeatherData(nom);
       // console.log('Le nom de la ville recherchée : ', this.nomVille);
       this.requeteChoixVille(nom);
       this.requetePhoto();
-      // for (let j = 0; j < this.tabPhotos.length; j++) {
-      //  console.log(this.tabPhotos[j]);
-      // }
+      this.child.getWeatherDataByCoords(this.latitude, this.longitude);
+      
       const temp = this.tabPhotos.length;
       if (temp < this.nbPhotomax) {
         this.nbPhotomax = temp;

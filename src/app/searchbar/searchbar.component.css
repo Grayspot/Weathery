@@ -9,8 +9,10 @@
     filter:alpha(opacity=50);
 }
 
-.test-inp{
-    background: red;
+.glass-button {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
 }
 
 .logo-text{
