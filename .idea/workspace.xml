@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c9dabd4-b063-444d-ba88-e6035d013d48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/searchbar/searchbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="Z:\GIT REPOS\Weathery\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,6 +93,7 @@
       <workItem from="1618243620063" duration="2611000" />
       <workItem from="1618331780297" duration="385000" />
       <workItem from="1618332919904" duration="4326000" />
+      <workItem from="1618342592974" duration="354000" />
     </task>
     <servers />
   </component>
