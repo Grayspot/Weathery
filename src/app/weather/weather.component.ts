@@ -101,33 +101,26 @@ export class WeatherComponent implements OnInit {
           this.WeatherTypeSound = 'http://skullbox.freeboxos.fr:27924/share/M_LSHjsoAKY25kpx/Atmosphere.mp3';
           if (this.WeatherData.isDay) {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/Uo3v9D-AferNqRWn/Atmosphere.svg';
-              return 'Atmosphere';
           } else {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/3eHYuECbqvhrasUZ/AtmosphereNight.svg';
-              return 'AtmosphereNight';
           }
         } else if (id === 800) {
           this.WeatherTypeSound = 'http://skullbox.freeboxos.fr:27924/share/vbvAxePW5qKrNuTM/Clouds%20Clear%20Ambience.mp3';
           if (this.WeatherData.isDay) {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/nZoenfTHE-oA4hHD/Clouds.svg';
-              return 'Clouds';
           } else {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/o8uVeDvttOCp2ywW/CloudsNight.svg';
-              return 'CloudsNight';
           }
         } else if (id > 799 && id < 805) {
           this.WeatherTypeSound = 'http://skullbox.freeboxos.fr:27924/share/vbvAxePW5qKrNuTM/Clouds%20Clear%20Ambience.mp3';
           if (this.WeatherData.isDay) {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/bHjOXWOjJTUcXvQ-/Clouds.svg';
-              return 'Clouds';
           } else {
               this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/bUL7M8i9vK_5TEso/CloudsNight.svg';
-              return 'CloudsNight';
           }
         } else {
           this.WeatherTypeSound = 'http://skullbox.freeboxos.fr:27924/share/HweY5XEtOkz2h_iS/Weathery.mp3';
           this.WeatherTypeIcon = 'http://skullbox.freeboxos.fr:27924/share/3HiVPPNkELfrKmhd/Clear.svg';
-          return 'Clear';
         }
     }
 }
