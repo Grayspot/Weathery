@@ -1,15 +1,11 @@
 <div class="page-header">
     <div class="video-container">
         <video playsinline autoplay muted loop>
-            <source src="../../assets/img/weathery/bg-vid.mp4" type="video/mp4">
+            <source src="http://skullbox.freeboxos.fr:27924/share/a_8jsjxG1Djcn19o/bg-vid.mp4" type="video/mp4">
         </video>
     </div>
     <div  *ngIf="loading" class="page-header-image" [ngStyle]="{'background-image': 'url(' + setBackgroundImage() + ')'}"></div>
     <div class="container">
-
-       <!--<div class="logo-container">
-            <img class="imglogo" src="assets/img/weathery/logo2.png" alt="" height="228">
-        </div>-->
         <div class="logo-text">Weathery</div>
         <form autocomplete="off" class="form"  (ngSubmit)="rechercheVille(nomVille)">
             <div class="content">
