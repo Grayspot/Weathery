@@ -27,3 +27,7 @@ All the other documents (such as story-board, personas, graphics chart etc) are 
 
 [CHANGELOG]: ./CHANGELOG.md
 [version-badge]: https://img.shields.io/badge/version-0.8.5-blue.svg
+
+## Quick Demo:
+https://user-images.githubusercontent.com/45198830/199019327-ebd4e8f1-61d5-49db-99ae-5fff423f8c96.mp4
+
